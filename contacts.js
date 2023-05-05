@@ -2,7 +2,7 @@ const fs = require('fs/promises');
 const path = require('path');
 const { nanoid } = require('nanoid');
 
-const contactsPath = path.resolve('bd', 'contacts.json');
+const contactsPath = path.resolve('db', 'contacts.json');
 
 const updateContacts = async contacts => {
   await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
